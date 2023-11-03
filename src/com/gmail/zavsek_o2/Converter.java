@@ -12,5 +12,12 @@ public class Converter  {
         System.out.println("Выберите вариант (1 - Мили в километры, 2 - Километры в мили): ");
         int choice = scanner.nextInt();
 
+        if (choice == 2) {
+            System.out.print("Введите расстояние в километрах: ");
+            double kilometers = scanner.nextDouble();
+            double miles = kilometersToMiles(kilometers);
+            System.out.println(kilometers + " километров = " + miles + " миль");
+        }
+
     }
 }
