@@ -2,7 +2,6 @@ package com.gmail.zavsek_o2;
 
 import java.util.Scanner;
 
-import java.util.Scanner;
 
 public class Converter {
     public static double milesToKilometers(double miles) {
