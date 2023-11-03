@@ -3,6 +3,8 @@ package com.gmail.zavsek_o2;
 import java.util.Scanner;
 
 public class Converter  {
+    public static double kilometersToMiles(double kilometers) {
+        return kilometers / 1.60934;
     public static double milesToKilometers(double miles) {
         return miles * 1.60934;
     }
@@ -18,10 +20,18 @@ public class Converter  {
             double kilometers = milesToKilometers(miles);
             System.out.println(miles + " миль = " + kilometers + " километров");
         } else if (choice == 2) {
+        System.out.println("Выберите вариант (1 - Мили в километры, 2 - Километры в мили): ");
+        int choice = scanner.nextInt();
+
+        if (choice == 2) {
             System.out.print("Введите расстояние в километрах: ");
             double kilometers = scanner.nextDouble();
             double miles = kilometersToMiles(kilometers);
             System.out.println(kilometers + " километров = " + miles + " миль");
+        }
+
+    }
+}
         } else {
             System.out.println("Неправильный вибор");
         }
