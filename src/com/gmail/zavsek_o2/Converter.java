@@ -2,38 +2,34 @@ package com.gmail.zavsek_o2;
 
 import java.util.Scanner;
 
-public class Converter  {
-    public static double kilometersToMiles(double kilometers) {
-        return kilometers / 1.60934;
+import java.util.Scanner;
+
+public class Converter {
     public static double milesToKilometers(double miles) {
         return miles * 1.60934;
     }
 
+    public static double kilometersToMiles(double kilometers) {
+        return kilometers / 1.60934;
+    }
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Выберите вариант (1 - мили в километры, 2 - километры в мили): ");
+        System.out.println("Оберіть операцію (1 - милі в кілометри, 2 - кілометри в милі): ");
         int choice = scanner.nextInt();
 
         if (choice == 1) {
-            System.out.print("Введите расстояние в милях: ");
+            System.out.print("Введіть відстань в милях: ");
             double miles = scanner.nextDouble();
             double kilometers = milesToKilometers(miles);
-            System.out.println(miles + " миль = " + kilometers + " километров");
+            System.out.println(miles + " миль = " + kilometers + " кілометрів");
         } else if (choice == 2) {
-        System.out.println("Выберите вариант (1 - Мили в километры, 2 - Километры в мили): ");
-        int choice = scanner.nextInt();
-
-        if (choice == 2) {
-            System.out.print("Введите расстояние в километрах: ");
+            System.out.print("Введіть відстань в кілометрах: ");
             double kilometers = scanner.nextDouble();
             double miles = kilometersToMiles(kilometers);
-            System.out.println(kilometers + " километров = " + miles + " миль");
-        }
-
-    }
-}
+            System.out.println(kilometers + " кілометрів = " + miles + " миль");
         } else {
-            System.out.println("Неправильный вибор");
+            System.out.println("Неправильний вибір");
         }
 
         scanner.close();
